@@ -1,0 +1,17 @@
+127.0.0.1 - - [10/Mar/2018:19:47:35 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:47:36 +0530] "GET /Exp1/ HTTP/1.1" 404 961
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:48:21 +0530] "GET /Exp1/Index.html HTTP/1.1" 200 602
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:48:41 +0530] "GET /Exp1/Cv.jsp?username=uk96&password=Uddesh96&email=uddesh&number=9892326829 HTTP/1.1" 200 461
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:48:43 +0530] "GET /Exp1/display.jsp HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:07 +0530] "GET /Exp1/display.jsp HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:08 +0530] "GET /Exp1/display.jsp HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:11 +0530] "GET /Exp1/display.jsp HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:14 +0530] "GET /Exp1/display.jsp HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:14 +0530] "GET /Exp1/display.jsp HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:35 +0530] "GET /Exp1/Index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:46 +0530] "GET /Exp1/Cv.jsp?username=Udde&password=dasd&email=dasd&number=sadasdas HTTP/1.1" 200 461
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:19:49:48 +0530] "GET /Exp1/Display.jsp HTTP/1.1" 200 480
+127.0.0.1 - - [10/Mar/2018:21:18:15 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:21:18:16 +0530] "GET /Exp1/ HTTP/1.1" 200 602
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:21:18:40 +0530] "GET /Exp1/Cv.jsp?username=gt&password=g&email=h&number=g HTTP/1.1" 200 657
+0:0:0:0:0:0:0:1 - - [10/Mar/2018:21:18:42 +0530] "GET /Exp1/Cv.jsp?username=gt&password=g&email=h&number=g HTTP/1.1" 200 657

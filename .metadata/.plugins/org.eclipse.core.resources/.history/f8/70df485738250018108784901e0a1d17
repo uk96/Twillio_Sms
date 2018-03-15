@@ -1,0 +1,11 @@
+package Database;
+import com.Twilio.SendSms;
+public class Access_Database {
+	public void connect(String number)
+	{
+		SendSms vary=new SendSms();
+		
+		
+		vary.sms(phone_number);
+	}
+}

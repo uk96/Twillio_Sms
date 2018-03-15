@@ -1,0 +1,40 @@
+package Database;
+import com.Twilio.SendSms;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+public class Access_Database {
+	public void connect(String number)
+	{
+		SendSms vary=new SendSms();
+		Connection con;
+		PreparedStatement pst;
+		String user,pass,email,number;
+		int rs;
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost/1514033","root","");
+			user=request.getParameter("username");
+			pass=request.getParameter("password");
+			email=request.getParameter("email");
+			number=request.getParameter("number");
+			pst=(PreparedStatement)con.prepareStatement("insert into Student values(?,?,?,?)");
+			pst.setString(1,user);
+			pst.setString(2,pass);
+			pst.setString(3,email);
+			pst.setString(4,number);
+			rs=pst.executeUpdate();
+			if(rs==1)
+			{
+				out.println("Sucessfully added.");
+			}
+			else
+			{
+				out.println("Row update failed");
+			}	
+		
+		}catch(Exception e){
+			out.println(e);
+		}
+		vary.sms(phone_number);
+	}
+}

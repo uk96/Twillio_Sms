@@ -1,0 +1,22 @@
+package com.Twilio;
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
+
+public class SendSms {
+	
+	public static final String ACCOUNT_SID = "ACa20d10960fbd2280329a873fd73bcedd";
+	public static final String AUTH_TOKEN = "c13ceab87c94796bf19e116f06ec4b3c";
+	public void sms(String number,String name,boolean license,boolean insurance)
+	{
+		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+		String mess="Dear "+name+" as you have violated traffic rule,the fine of RS500 have to be paid within 10-15 days to nearest RTO Office. ";
+		if(!license)
+			mess+="And your license is expired. ";
+		if(!insurance)
+			mess+="Your Insurance as also expired.";
+		System.out.println(mess);
+		Message message = Message.creator(new PhoneNumber(number),new PhoneNumber("+14105933830"),mess).create();
+		System.out.println(message.getSid());
+	}
+}

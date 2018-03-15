@@ -1,0 +1,41 @@
+package Database;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
+import com.Twilio.SendSms;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
+public class Access_Database {
+	public void connect(String number)
+	{
+		SendSms vary=new SendSms();
+		Connection con;
+		Statement st;
+		String user,pass,email,number;
+		int rs;
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost/1514033","root","");
+			st=(Statement)con.createStatement();
+			ResultSet rst=st.executeQuery("select * from Student");
+			out.print("<table border='10'>");
+			out.print("<tr><th>Username</th><th>Email Id</th><th>Password</th></tr>");
+			while(rst.next()){
+				System.out.print("<tr><td>"+rst.getString(1)+"</td><td>"+rst.getString(3)+"</td><td>"+rst.getString(4)+"</td></tr>");
+			}
+			if(rs==1)
+			{
+				System.out.println("Sucessfully added.");
+			}
+			else
+			{
+				System.out.println("Row update failed");
+			}	
+		
+		}catch(Exception e){
+			out.println(e);
+		}
+		vary.sms(phone_number);
+	}
+}
