@@ -1,5 +1,0 @@
-package Database;
-import com.Twilio.SendSms;
-public class Access_Database {
-
-}
